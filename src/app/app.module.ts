@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormeComponent } from './forme/forme.component';
+import { EditformeComponent } from './editforme/editforme.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormeComponent
+    FormeComponent,
+    EditformeComponent
   ],
   imports: [
     BrowserModule
