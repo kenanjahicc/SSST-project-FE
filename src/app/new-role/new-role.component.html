@@ -4,6 +4,21 @@
 <h4>Here you can create new role in your company</h4>
 
 
+
+<!--<form #roleForm="ngForm" (ngSubmit)="submit(roleForm)">-->
+<!--  <div class="form-group">-->
+<!--    <label for="name">Role Name:</label>-->
+<!--    <input type="text" class="form-control" id="name" name="name" ngModel required>-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="description">Role Description:</label>-->
+<!--    <textarea class="form-control" id="description" name="description" ngModel required></textarea>-->
+<!--  </div>-->
+<!--  <button type="submit" class="btn btn-primary" name="action" value="saveDraft">Save as Draft</button>-->
+<!--  <button type="submit" class="btn btn-success" name="action" value="submitFinal">Submit Final</button>-->
+<!--</form>-->
+
+<form (ngSubmit)="submit()">
 <mat-form-field appearance="fill">
   <mat-label>Title</mat-label>
   <input matInput>
@@ -12,11 +27,10 @@
   <mat-label>Income ammount</mat-label>
   <input matInput>
 </mat-form-field>
-
 <section>
   <div class="example-button-row">
-    <button mat-stroked-button>Create new</button>
-    <button mat-stroked-button>Cancel</button>
+    <button mat-stroked-button, type="submit">Create new</button>
+    <button mat-stroked-button, type="click">Cancel</button>
   </div>
 </section>
-
+</form>
