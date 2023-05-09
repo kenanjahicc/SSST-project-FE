@@ -10,13 +10,15 @@ import { FormeComponent } from './forme/forme.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormeComponent,
     NewRoleComponent,
-    NewRoleEditComponent
+    NewRoleEditComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,

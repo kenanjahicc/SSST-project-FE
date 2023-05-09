@@ -1,0 +1,39 @@
+<!DOCTYPE html>git
+<html>
+<head>
+  <title>Edit Profile - User Profile Form</title>
+  <link rel="stylesheet" type="text/css" href="edit-form.component.css">
+</head>
+<body>
+<form>
+  <div class="container">
+    <h1>Edit Profile</h1>
+    <h3>Here you can edit and remove profile</h3>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+
+    <label for="team">Team</label>
+    <select id="team" name="team">
+      <option value="team1">Team 1</option>
+      <option value="team2">Team 2</option>
+      <option value="team3">Team 3</option>
+    </select>
+
+    <label for="role">Role</label>
+    <select id="role" name="role">
+      <option value="developer">Developer</option>
+      <option value="designer">Designer</option>
+      <option value="manager">Manager</option>
+      <option value="sales">Sales</option>
+    </select>
+
+    <label for="salary">Salary</label>
+    <input type="text" id="salary" name="salary" placeholder="Enter salary" required>
+
+    <button type="submit">Save Changes</button>
+    <button type="button" class="cancel">Cancel</button>
+    <button type="button" class="remove">Remove</button>
+  </div>
+</form>
+</body>
+</html>
