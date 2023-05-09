@@ -8,6 +8,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { FormeComponent } from './forme/forme.component';
 import { AppRoutingModule } from './app-routing.module';
+import {FormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    FormsModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
