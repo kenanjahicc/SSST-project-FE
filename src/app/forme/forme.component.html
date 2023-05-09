@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Member - New Member Form</title>
+  <link rel="stylesheet" type="text/css" href="forme.component.css">
+</head>
+<body>
+<form>
+  <div class="container">
+    <h1>New Member</h1>
+    <h3>Here you can add employee to your company</h3>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+
+    <label for="team">Team</label>
+    <select id="team" name="team">
+      <option value="team1">Team 1</option>
+      <option value="team2">Team 2</option>
+      <option value="team3">Team 3</option>
+    </select>
+
+    <label for="role">Role</label>
+    <select id="role" name="role">
+      <option value="developer">Developer</option>
+      <option value="designer">Designer</option>
+      <option value="manager">Manager</option>
+      <option value="sales">Sales</option>
+    </select>
+
+    <label for="salary">Salary</label>
+    <input type="text" id="salary" name="salary" placeholder="Enter salary" required>
+
+    <button type="submit">Create New</button>
+    <button type="button" class="cancel">Cancel</button>
+  </div>
+</form>
+</body>
+</html>
