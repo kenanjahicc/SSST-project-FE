@@ -8,7 +8,7 @@ import {EmployeesComponent} from "./employees/employees.component";
 import {RolesComponent} from "./roles/roles.component";
 import {NewTeamComponent} from "./new-team/new-team.component";
 import {EditTeamComponent} from "./edit-team/edit-team.component";
-import {TeamResolver} from "./resolvers/team.resolver";
+
 
 
 const routes: Routes = [
@@ -23,9 +23,6 @@ const routes: Routes = [
   {
     path: 'teams',
     component:TeamsComponent,
-    resolve: {
-      teams: TeamResolver
-    }
   },
   {
     path: 'employees',

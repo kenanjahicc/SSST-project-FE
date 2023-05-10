@@ -22,7 +22,7 @@ import { NewTeamComponent } from './new-team/new-team.component';
 import { EditTeamComponent } from './edit-team/edit-team.component';
 import {TeamService} from "./services/team.service";
 import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
-import {TeamResolver} from "./resolvers/team.resolver";
+
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import {TeamResolver} from "./resolvers/team.resolver";
     MatGridListModule,
     HttpClientModule
   ],
-  providers: [TeamService, HttpClient, TeamResolver],
+  providers: [TeamService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
