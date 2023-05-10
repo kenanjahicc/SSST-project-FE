@@ -9,6 +9,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormeComponent } from './forme/forme.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
+import { TeamsComponent } from './teams/teams.component';
+import {RouterOutlet} from "@angular/router";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { HeaderComponent } from './header/header.component';
     NewRoleComponent,
     NewRoleEditComponent,
     HeaderComponent,
+    TeamsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
     MatToolbarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterOutlet,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

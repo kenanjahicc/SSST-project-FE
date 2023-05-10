@@ -1,8 +1,11 @@
 mat-toolbar {
+  width: 80%;
+  padding-bottom: 5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: white;
+  margin: 0 auto;
 }
 
 .spacer {
