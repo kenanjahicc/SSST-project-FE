@@ -1,7 +1,7 @@
 export interface Role{
-  id?:number;
-  title:string;
-  description:string;
-  salary:number;
-
+  id: number;
+  title: string;
+  income: number;
+  createdAt: Date;
+  updatedAt: Date;
 }

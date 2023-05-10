@@ -15,6 +15,14 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { TeamCardComponent } from './team-card/team-card.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { RolesComponent } from './roles/roles.component';
+import { NewTeamComponent } from './new-team/new-team.component';
+import { EditTeamComponent } from './edit-team/edit-team.component';
+import {TeamService} from "./services/team.service";
+import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
+import {TeamResolver} from "./resolvers/team.resolver";
 
 @NgModule({
   declarations: [
@@ -25,6 +33,11 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     EditFormComponent,
     HeaderComponent,
     TeamsComponent,
+    TeamCardComponent,
+    EmployeesComponent,
+    RolesComponent,
+    NewTeamComponent,
+    EditTeamComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +48,10 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     MatToolbarModule,
     MatFormFieldModule,
     RouterOutlet,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TeamService, HttpClient, TeamResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
