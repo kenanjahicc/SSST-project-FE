@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { EditFormComponent } from './edit-form/edit-form.component';
+import {EmployeesComponent} from "./employees/employees.component";
+import {EmployeeService} from "./services/employee.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     FormeComponent,
     NewRoleComponent,
     NewRoleEditComponent,
-    EditFormComponent
+    EditFormComponent,
+    EmployeesComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,9 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     FormsModule,
     MatInputModule,
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

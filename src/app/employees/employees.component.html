@@ -1,0 +1,27 @@
+<div>
+  <h1>Your employees</h1>
+  <button>Add new</button>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>Full Name</th>
+    <th>Salary</th>
+    <th>Team</th>
+    <th>Role</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <div *ngFor="let employee of employees">
+  <tr>
+    <td>{{employee.name}}</td>
+    <td>{{employee.salary}}</td>
+    <td>{{employee.team}}</td>
+    <td>{{employee.role}}</td>
+    <td><button>Delete</button></td>
+  </tr>
+  </div>
+  </tbody>
+</table>
