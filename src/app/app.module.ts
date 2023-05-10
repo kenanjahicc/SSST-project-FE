@@ -15,6 +15,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { RolesComponent } from './roles/roles.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     EditFormComponent,
     HeaderComponent,
     TeamsComponent,
+    RolesComponent,
   ],
   imports: [
     BrowserModule,
