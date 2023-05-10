@@ -1,0 +1,21 @@
+mat-toolbar {
+  width: 80%;
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  margin: 0 auto;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  margin-left: 8px;
+}
+
+.header-text {
+  font-family: Arial, sans-serif;
+}
