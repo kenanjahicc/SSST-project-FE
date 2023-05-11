@@ -4,6 +4,11 @@ import {RouterModule,Routes} from "@angular/router";
 import {TeamsComponent} from "./teams/teams.component";
 import {NewRoleComponent} from "./new-role/new-role.component";
 import {NewRoleEditComponent} from "./new-role-edit/new-role-edit.component";
+import {EmployeesComponent} from "./employees/employees.component";
+import {RolesComponent} from "./roles/roles.component";
+import {NewTeamComponent} from "./new-team/new-team.component";
+import {EditTeamComponent} from "./edit-team/edit-team.component";
+
 
 
 const routes: Routes = [
@@ -17,7 +22,23 @@ const routes: Routes = [
   },
   {
     path: 'teams',
-    component:TeamsComponent
+    component:TeamsComponent,
+  },
+  {
+    path: 'employees',
+    component:EmployeesComponent
+  },
+  {
+    path: 'roles',
+    component: RolesComponent
+  },
+  {
+    path: 'new-team',
+    component: NewTeamComponent
+  },
+  {
+    path: 'edit-team',
+    component: EditTeamComponent
   }
 ]
 

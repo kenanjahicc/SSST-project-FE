@@ -1,34 +1,40 @@
 <div class="wrapper">
 <body>
 
+<div style="display: flex;
+  justify-content: space-between;
+  align-items: center;">
+
   <div class="text1">Welcome Back! <br>
     <a class="text2">Take a look at your revenue for April,2023</a>
   </div>
-  <button mat-button routerLink="/new-role">Create New</button>
+  <button mat-button routerLink="/new-team">Create New</button>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; background-color: #F3F2FD; padding-left: 30px; padding-right: 30px; margin-top: 5%; border-radius:  12px">
+ <div>
+   <h3 style="font-size: 2em">$ 320 000</h3>
+   <p style="font-size: 1.5em">Total Revenue</p>
+ </div>
+  <div>
+    <h3 style="font-size: 2em">$ 120 000</h3>
+    <p style="font-size: 1.5em">Salaries</p>
+  </div>
+  <div>
+    <h3 style="font-size: 2em">10</h3>
+    <p style="font-size: 1.5em">Teams</p>
+  </div>
+  <div>
+    <h3 style="font-size: 2em">5</h3>
+    <p style="font-size: 1.5em">Roles</p>
+  </div>
+  <div>
+    <h3 style="font-size: 2em">20</h3>
+    <p style="font-size: 1.5em">Employees</p>
+  </div>
+</div>
+
+
+  <app-team-card/>
 
 </body>
-<div class="center">
-  <mat-grid-list cols="4" rowHeight="2:1">
-    <mat-grid-tile><div class="table-line-1">
-      <div class="table-line-text1">
-        <a class="a1">+$50,000</a>
-        <a class="a2">-$10,000</a>
-      </div>
-      <button mat-button routerLink="/edit-team" id="editbutton">Edit </button></div>
-      <div><a>Apple</a></div>
-    </mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-  </mat-grid-list></div>
-<div class="center2">
-  <mat-grid-list cols="4" rowHeight="2:1">
-    <mat-grid-tile>5</mat-grid-tile>
-    <mat-grid-tile>6</mat-grid-tile>
-    <mat-grid-tile>7</mat-grid-tile>
-    <mat-grid-tile>8</mat-grid-tile>
-  </mat-grid-list>
-
-
-</div>
 </div>

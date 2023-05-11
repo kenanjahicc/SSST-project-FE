@@ -1,9 +1,7 @@
 import {Employee} from "./employee.model";
 
-export interface Team{
+export interface Team {
+  id: number;
   title: string;
-  employees: Array<Employee>
-  gained: number;
-  lost: number;
-  profit:number;
+  employees: Employee[];
 }

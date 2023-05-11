@@ -1,7 +1,10 @@
+import {Role} from "./role.model";
+
 export interface Employee{
-  id?: number;
+  id: number;
   name: string;
   salary: number;
-  // team: TeamEntity;
-  // role: RoleEntity;
+  role: Role;
+  createdAt: Date;
+  updatedAt: Date;
 }

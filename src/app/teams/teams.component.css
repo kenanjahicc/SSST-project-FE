@@ -4,9 +4,6 @@
 }
 body {
   padding: 5vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #f9f9f9;
   margin: 0 auto;
 }
