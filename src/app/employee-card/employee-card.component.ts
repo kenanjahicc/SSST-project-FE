@@ -1,27 +1,23 @@
 import {Component, Input} from '@angular/core';
 import {TeamService} from "../services/team.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {EmployeeService} from "../services/employee.service";
 
 @Component({
-  selector: 'app-team-card',
-  templateUrl: './team-card.component.html',
-  styleUrls: ['./team-card.component.css']
+  selector: 'app-employee-card',
+  templateUrl: './employee-card.component.html',
+  styleUrls: ['./employee-card.component.css']
 })
-export class TeamCardComponent {
+export class EmployeeCardComponent {
+
   @Input()
-  title!: string;
+  name!: string;
   @Input()
-  members!: number;
-  @Input()
-  profit!:number;
-  @Input()
-  income!:number;
-  @Input()
-  loss!:number;
+  salary!: number;
   @Input()
   id!:number;
 
-  constructor(private teamsService: TeamService,
+  constructor(private employeeService: EmployeeService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
   }
@@ -29,6 +25,5 @@ export class TeamCardComponent {
   setId():void {
     localStorage.setItem("id",this.id.toString())
   }
+
 }
-
-

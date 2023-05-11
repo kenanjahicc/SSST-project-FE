@@ -32,9 +32,18 @@
     <p style="font-size: 1.5em">Employees</p>
   </div>
 </div>
-
-
-  <app-team-card/>
+<div *ngFor="let team of teams">
+  <div style="display: flex; flex-direction: column">
+<app-team-card
+  [title]="team.title"
+  [members]="team.employees.length"
+  [profit]="40000"
+  [income]="50000"
+  [loss]="10000"
+  [id]="team.id"
+/>
+  </div>
+</div>
 
 </body>
 </div>

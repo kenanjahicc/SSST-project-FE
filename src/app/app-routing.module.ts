@@ -8,6 +8,9 @@ import {EmployeesComponent} from "./employees/employees.component";
 import {RolesComponent} from "./roles/roles.component";
 import {NewTeamComponent} from "./new-team/new-team.component";
 import {EditTeamComponent} from "./edit-team/edit-team.component";
+import {NewEmployeeComponent} from "./new-employee/new-employee.component";
+import {EditEmployeeComponent} from "./edit-employee/edit-employee.component";
+import {EditRoleComponent} from "./edit-role/edit-role.component";
 
 
 
@@ -19,6 +22,19 @@ const routes: Routes = [
   {
     path: "new-role-edit",
     component: NewRoleEditComponent
+  },
+
+  {
+    path: "edit-role",
+    component: EditRoleComponent
+  },
+  {
+    path: "new-employee",
+    component: NewEmployeeComponent
+  },
+  {
+    path: "edit-employee",
+    component: EditEmployeeComponent
   },
   {
     path: 'teams',

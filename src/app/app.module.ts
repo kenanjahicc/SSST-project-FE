@@ -12,7 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { TeamsComponent } from './teams/teams.component';
 import {RouterOutlet} from "@angular/router";
 import {MatGridListModule} from "@angular/material/grid-list";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { EditFormComponent } from './edit-form/edit-form.component';
 import { TeamCardComponent } from './team-card/team-card.component';
@@ -22,6 +22,12 @@ import { NewTeamComponent } from './new-team/new-team.component';
 import { EditTeamComponent } from './edit-team/edit-team.component';
 import {TeamService} from "./services/team.service";
 import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
+import { NewEmployeeComponent } from './new-employee/new-employee.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { EmployeeCardComponent } from './employee-card/employee-card.component';
+import { RoleCardComponent } from './role-card/role-card.component';
+import { EditRoleComponent } from './edit-role/edit-role.component';
+
 
 
 @NgModule({
@@ -38,6 +44,12 @@ import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
     RolesComponent,
     NewTeamComponent,
     EditTeamComponent,
+    NewEmployeeComponent,
+    EditEmployeeComponent,
+    EmployeeCardComponent,
+    RolesComponent,
+    RoleCardComponent,
+    EditRoleComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +61,8 @@ import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
     MatFormFieldModule,
     RouterOutlet,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [TeamService, HttpClient],
   bootstrap: [AppComponent]
