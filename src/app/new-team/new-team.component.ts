@@ -2,6 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TeamService} from "../services/team.service";
 import {Team} from "../models/team.model";
 import {ActivatedRoute, Router} from "@angular/router";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+
 
 @Component({
   selector: 'app-new-team',
@@ -10,7 +12,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class NewTeamComponent implements OnInit, OnDestroy {
 
-  public newTeam!: Team
+  contactForm = new FormGroup({
+    title: new FormControl('', Validators.required),
+  });
 
   constructor(private teamsService: TeamService,
               private router: Router,
@@ -19,7 +23,10 @@ export class NewTeamComponent implements OnInit, OnDestroy {
 
 
   createTeam(): void {
-    this.teamsService.createTeam(this.newTeam).subscribe(() => {
+    let title=this.contactForm.get('title')?.value
+    console.log(title);
+    const newTeam: Team ={title: title!, id:123, employees:[], gained:123001};
+    this.teamsService.createTeam(newTeam).subscribe(() => {
       this.navigateToTeams();
     });
   }
@@ -27,6 +34,8 @@ export class NewTeamComponent implements OnInit, OnDestroy {
   private navigateToTeams() {
     this.router.navigate(['/teams']);
   }
+
+
 
   ngOnDestroy(): void {
   }

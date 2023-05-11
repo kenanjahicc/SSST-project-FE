@@ -29,7 +29,9 @@ export class TeamService {
   }
 
   deleteTeam(teamId: number): Observable<null> {
+    console.log(teamId);
     this.http.delete(`${this.baseUrl}/${teamId}`);
+    localStorage.clear();
     return of(null);
   }
 }

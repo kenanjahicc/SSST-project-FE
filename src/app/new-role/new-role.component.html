@@ -1,21 +1,24 @@
-<h1>New Role</h1>
-
-<h4>Here you can create new role in your company</h4>
-
-
-<mat-form-field appearance="fill">
-  <mat-label>Title</mat-label>
-  <input matInput>
-</mat-form-field>
-<mat-form-field appearance="fill">
-  <mat-label>Income ammount</mat-label>
-  <input matInput>
-</mat-form-field>
-
-<section>
-  <div class="example-button-row">
-    <button mat-stroked-button>Create new</button>
-    <button mat-stroked-button>Cancel</button>
+<body style="width: 100%; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center">
+<div style="background-color: #F9F9F9; padding: 50px; width:50%; margin-top: 5%">
+  <div style="display: flex; justify-content: center">
+    <h2>New Team</h2>
   </div>
-</section>
+  <div style="display: flex; justify-content: center;">
+    <h3 style="font-weight: normal">Here you can create new team in your company</h3>
+  </div>
+  <form style="display:flex; flex-direction: column" [formGroup]="contactForm"  (submit)="createRole()">
+    <label style="margin-bottom: 2%">Name</label>
+    <input style="border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="text" placeholder="Designer" id="title" formControlName="title">
+    <label style="margin-bottom: 2%">Name</label>
+    <input style="border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="text" placeholder="Designer" id="income" formControlName="income">
+    <button style="background-color: #FCA311; color: white; border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="submit" >Create new</button>
+    <button style="background-color:white;border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" mat-button routerLink="/roles">Cancel</button>
+  </form>
 
+
+
+
+
+
+</div>
+</body>

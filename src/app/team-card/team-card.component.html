@@ -1,12 +1,12 @@
-<div style="width: 20%; background-color: white; padding-left: 30px; padding-right: 30px;padding-bottom: 30px; border-radius: 10px; margin-top: 5% ">
+<div style="width: 95%; background-color: white; padding-left: 30px; padding-right: 30px;padding-bottom: 30px; border-radius: 10px; margin-top: 5% ">
 <div style="display: flex; justify-content: space-between; align-items: center">
   <div style="display: flex; width: 70%; justify-content: space-between">
-    <p style="background-color: #D5FFE6; padding: 3px; border-radius: 6px">+ $50,000</p>
-    <p style="background-color: #FFD7D5; padding: 3px; border-radius: 6px">+ $10,000</p>
+    <p style="background-color: #D5FFE6; padding: 3px; border-radius: 6px">+ ${{income}}</p>
+    <p style="background-color: #FFD7D5; padding: 3px; border-radius: 6px">+ ${{loss}}</p>
   </div>
-  <button mat-button routerLink="/edit-team">Edit</button>
+  <button mat-button routerLink="/edit-team" (click)="setId()">Edit</button>
 </div>
-  <p style="font-size: 2em">Apple</p>
-  <p>Total Profit: $40 000</p>
-  <p>10 Members</p>
+  <p style="font-size: 2em">{{title}}</p>
+  <p>Total Profit: ${{profit}}</p>
+  <p>{{members}} Members</p>
 </div>

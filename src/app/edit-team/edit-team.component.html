@@ -6,11 +6,11 @@
   <div style="display: flex; justify-content: center;">
     <h3 style="font-weight: normal">Check the relevant information or delete the team</h3>
   </div>
-  <form style="display:flex; flex-direction: column">
+  <form style="display:flex; flex-direction: column" [formGroup]="contactForm"  (submit)="editTeam()">
     <label style="margin-bottom: 2%">Name</label>
-    <input style="border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="text" placeholder="Apple Inc - iOS Team" [(ngModel)]="newTeam.title">
+    <input style="border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="text" placeholder="Apple Inc - iOS Team" id="title" formControlName="title">
     <button style="background-color: #FCA311; color: white; border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" type="submit" (click)="editTeam()">Save Changes</button>
-    <button style="background-color:white;border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" mat-button routerLink="/teams">Cancel</button>
+    <button style="background-color:white;border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" mat-button routerLink="/teams" (click)="clear()">Cancel</button>
     <button style="background-color:white;border: 2px solid #E2574E; color: #E2574E;
  border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" mat-button (click)="deleteTeam()">Delete Name Team</button>
   </form>

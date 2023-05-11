@@ -1,1 +1,21 @@
-<p>employees works!</p>
+<div class="wrapper">
+  <body>
+
+  <div style="display: flex;
+  justify-content: space-between;
+  align-items: center;">
+
+    <div class="text1">Your employees <br>
+      <a class="text2">Take a look at your employees for April,2023</a>
+    </div>
+    <button id="create" mat-button routerLink="/new-employee">Create New</button>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center; background-color: white; padding-left: 30px; padding-right: 30px; margin-top: 5%; border-radius:  12px" *ngFor="let employee of employees">
+    <app-employee-card
+      [name]="employee.name"
+      [salary]="employee.salary"
+      [id]="employee.id"
+      />
+  </div>
+  </body>
+</div>

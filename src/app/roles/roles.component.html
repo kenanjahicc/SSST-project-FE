@@ -1,1 +1,21 @@
-<p>roles works!</p>
+<div class="wrapper">
+  <body>
+
+  <div style="display: flex;
+  justify-content: space-between;
+  align-items: center;">
+
+    <div class="text1">Roles <br>
+      <a class="text2">Take a look at Roles for April,2023</a>
+    </div>
+    <button id="create" mat-button routerLink="/new-role">Create New</button>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center; background-color: white; padding-left: 30px; padding-right: 30px; margin-top: 5%; border-radius:  12px" *ngFor="let role of roles">
+    <app-role-card
+      [title]="role.title"
+      [income]="role.income"
+      [id]="role.id"
+    />
+  </div>
+  </body>
+</div>

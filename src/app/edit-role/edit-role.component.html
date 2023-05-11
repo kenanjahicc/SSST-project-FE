@@ -1,0 +1,20 @@
+<body style="width: 100%; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center">
+<div style="background-color: #F9F9F9; padding: 50px; width:50%; margin-top: 5%">
+  <div style="display: flex; justify-content: center">
+    <h2>Team Name</h2>
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <h3 style="font-weight: normal">Check the relevant information or delete the team</h3>
+  </div>
+  <form style="display:flex; flex-direction: column" [formGroup]="contactForm"  (submit)="editRole()">
+    <label style="margin-bottom: 2%">Name</label>
+    <input style="border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="text" placeholder="Apple Inc - iOS Team" id="title" formControlName="title">
+    <label style="margin-bottom: 2%">Income</label>
+    <input style="border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 5%" type="text" placeholder="Apple Inc - iOS Team" id="income" formControlName="income">
+    <button style="background-color: #FCA311; color: white; border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" type="submit" (click)="editRole()">Save Changes</button>
+    <button style="background-color:white;border: none; border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" mat-button routerLink="/roles" (click)="clear()">Cancel</button>
+    <button style="background-color:white;border: 2px solid #E2574E; color: #E2574E;
+ border-radius: 8px; padding: 10px 18px 10px 18px; margin-bottom: 3%" mat-button (click)="deleteRole()">Delete Role</button>
+  </form>
+</div>
+</body>
